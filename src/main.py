@@ -19,6 +19,7 @@ import os
 #=============================================
 def f_listar(v_lista):
     # print das pesoas presnetes na lista
+    os.system('cls')
     print('=== LISTAR PESSOAS ===')
     for id_pessso, dados in v_lista.items():
         print('-------------')
@@ -33,6 +34,7 @@ def f_listar(v_lista):
 #============================================
 def f_buscar():
     # busca pelas chaves do dicionário
+    os.system('cls')
     print('=== BUSCAR PESSOA ===')
     print('[nome] [data] [categoria]')
     v_busca = input('Buscar por: ').lower().strip()
@@ -127,6 +129,7 @@ def f_buscar():
 
 #========================================           
 def f_adicionar():
+    os.system('cls')
     print('=== ADICIONAR NOVA PESSOA ===')
     nome = input('Informe o nome: ').strip()
     if not nome:
@@ -173,6 +176,7 @@ def f_adicionar():
 
 #=========================
 def f_excluir():
+    os.system('cls')
     print('=== EXCLUIR PESSOA ===')
     if not agenda_pessoas:
         print('A agenda está vazia. Não há registos para excluir.')
@@ -241,28 +245,31 @@ while rodar == True:
     print('[3] - adicionar')
     print('[4] - excluir')
     print('[0] - sair')
-    acao= int(input('- ')) # tratmento para try - com int
-    os.system('cls')
 
-    if acao == 1:
-        f_listar(agenda_pessoas)
-
-    elif acao == 2:
-        f_buscar()
-
-    elif acao == 3:
-        f_adicionar()
-
-    elif acao == 4:
-        f_excluir()
-
-    elif acao == 0:
-        print('=== SISTEMA FECHADO ===')
-        break
+    try:
+        acao = int(input('- '))
+        if acao == 1:
+            f_listar(agenda_pessoas)
+        
+        elif acao == 2:
+            f_buscar()
+        
+        elif acao == 3:
+            f_adicionar()
+        
+        elif acao == 4:
+            f_excluir()
+        
+        elif acao == 0:
+                print('=== SISTEMA FECHADO ===')
+                break
+        else: 
+            print('Ação não comportada, tente novamente')
+            continue
     
-    else: 
+
+    except ValueError:
         os.system('cls')
-        print('ação não comportada, tente novamente')
+        print('Entrada inválida! Digite apenas números.')
         continue
-
-
+    
