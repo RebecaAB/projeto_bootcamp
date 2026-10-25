@@ -22,11 +22,6 @@ A **Agenda de Aniversários** é um sistema desenvolvido em Python, executado vi
   * `os` (Para limpeza e controlo da consola/terminal)
 
 ## Guia de Instalação e Execução
-### 0. Instalar o Docker
-Caso você não tenha 
-```bash
-
-```
 ### 1. Clonar o Git
 Crie uma pasta vazia para ser o local onde o GitHub irá clonar a pasta do programa. Após isso abra o terminal e entre na pasta via IDE <br>
 ```bash
