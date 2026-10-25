@@ -28,17 +28,21 @@ Caso você não tenha
 
 ```
 ### 1. Clonar o Git
+Crie uma pasta vazia para ser o local onde o GitHub irá clonar a pasta do programa. Após isso abra o terminal e entre na pasta via IDE <br>
 ```bash
-
+git clone https://github.com/RebecaAB/projeto_bootcamp.git
+cd projeto_bootcamp
 ```
 ### 2. Executar o Programa
 Como construir a imagem:
 ```bash
 docker build -t tasktracker-app .
 ```
+Como rodar o container em modo isolado
 ```bash
 docker run -it tasktracker-app
 ```
+Como rodar via orquestração
 ```bash
 docker compose run tasktracker
 ```
