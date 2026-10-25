@@ -22,5 +22,16 @@ A **Agenda de Aniversários** é um sistema desenvolvido em Python, executado vi
   * `os` (Para limpeza e controlo da consola/terminal)
 
 ## Guia de Instalação e Execução
-### Pré-requisitos
-Certifique-se de que tem o **Python** instalado no seu computador. Pode verificar abrindo o terminal e executando:
+### 0. Instalar o Docker
+Caso você não tenha 
+```bash
+
+```
+### 1. Clonar o Git
+```bash
+
+```
+### 2. Executar o Programa
+```bash
+
+```
