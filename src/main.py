@@ -53,7 +53,7 @@ def f_buscar():
     print("-----------------")
 
     # NOME BUSCAR[cite: 1]
-if v_busca == "nome":
+    if v_busca == "nome":
         nome_pessoa = input("Informe o nome: ").strip().lower()
         for id_pessoa, dados in agenda_pessoas.items():
             if nome_pessoa in dados["nome"].lower():
@@ -68,7 +68,7 @@ if v_busca == "nome":
             print(f'Nenhum registo encontrado com o nome "{nome_pessoa}".')
 
     # DATA BUSCAR[cite: 1]
-elif v_busca == "data_nascimento":
+    elif v_busca == "data_nascimento":
         print("Buscar por data 00/00/0000")
         print("Pode ser informado por parte (dia, mês ou ano)")
         data_pessoa = input("Informe a busca: ").strip()
@@ -103,7 +103,7 @@ elif v_busca == "data_nascimento":
             print("Nenhuma pessoa encontrada com essa data.")
 
     # CATEGORIA BUSCAR[cite: 1]
-elif v_busca == "categoria":
+    elif v_busca == "categoria":
         categorias_unidade = set()
         for dados in agenda_pessoas.values():
             if "categoria" in dados:
@@ -124,8 +124,8 @@ elif v_busca == "categoria":
         if not encontrada:
             print("Nenhuma pessoa encontrada nessa categoria.")
 
-    input("\nPressione Enter para continuar...")
-    os.system("cls")
+        input("\nPressione Enter para continuar...")
+        os.system("cls")
 
 #========================================           
 def f_adicionar():
@@ -138,7 +138,7 @@ def f_adicionar():
         os.system("cls")
         return
 
-data_nascimento = input("Informe a data de nascimento (DD/MM/AAAA): ").strip()
+    data_nascimento = input("Informe a data de nascimento (DD/MM/AAAA): ").strip()
     # Validação simples do formato da data
     if len(data_nascimento) != 10 or data_nascimento[2] != "/" or data_nascimento[5] != "/":
         print("Formato de data inválido! Utilize DD/MM/AAAA.")
