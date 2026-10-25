@@ -32,6 +32,15 @@ Caso você não tenha
 
 ```
 ### 2. Executar o Programa
+Como construir a imagem:
 ```bash
-
+docker build -t tasktracker-app .
 ```
+```bash
+docker run -it tasktracker-app
+```
+```bash
+docker compose run tasktracker
+```
+
+
